@@ -1,1 +1,173 @@
-forms
+<html> 
+ <head> 
+  <title>form</title> 
+  <style>
+    .error {
+      color: red;
+    }
+  </style> 
+ </head> 
+ <body> 
+  <h2 align="center">STUDENT REGISTRATION FORM</h2> 
+  <form id="form" onsubmit="return validateForm()"> 
+   <table border="2"> 
+    <tbody>
+     <tr> 
+      <td>FIRST NAME:</td> 
+      <td><input type="text" id="fname" name="fname" maxlength="30">(max 30 characters) <span id="firstNameError" class="error"></span> </td> 
+     </tr> 
+     <tr> 
+      <td>LAST NAME:</td> 
+      <td><input type="text" id="lname" name="lname" maxlength="30">(max 30 characters) <span id="lastNameError" class="error"></span> </td> 
+     </tr> 
+     <tr> 
+      <td>DATE OF BIRTH:</td> 
+      <td> <select> <option> Day</option> <option> 1</option> <option> 2</option> <option> 3</option> <option> 4</option> <option> 5</option> <option> 6</option> <option> 7</option> <option> 8</option> <option> 9</option> <option> 10</option> <option> 11</option> <option> 12</option> <option> 13</option> <option> 14</option> <option> 15</option> <option> 16</option> <option> 17</option> <option> 18</option> <option> 19</option> <option> 20</option> <option> 21</option> <option> 22</option> <option> 23</option> <option> 24</option> <option> 25</option> <option> 26</option> <option> 27</option> <option> 28</option> <option> 29</option> <option> 30</option> <option> 31</option> </select> <select> <option> Month</option> <option> January</option> <option> feb</option> <option> mar</option> <option>april</option> <option> may</option> <option> june</option> <option> july</option> <option> aug</option> <option> sept</option> <option> oct</option> <option> nov</option> <option> dec</option> </select> <select> <option> Year</option> <option> 1990</option> <option> 1991</option> <option> 1992</option> <option> 1993</option> <option>1994</option> <option> 1995</option> <option> 1996</option> <option> 1997</option> <option> 1998</option> <option> 1999</option> <option>2000</option> <option>2001</option> <option>2002</option> <option>2003</option> <option>2004</option> <option>2005</option> <option>2006</option> <option>2007</option> <option>2008</option> <option>2009</option> <option>2010</option> <option>2011</option> <option>2012</option> <option>2013</option> <option>2014</option> <option>2015</option> <option>2016</option> <option>2017</option> <option>2018</option> <option>2019</option> <option>2020</option> <option>2021</option> <option>2019</option> <option>2020</option> <option>2021</option> <option>2022</option> <option>2023</option> <option>2024</option> </select></td> 
+     </tr> 
+     <tr> 
+      <td>E MAIL ID:</td> 
+      <td><input type="email" id="email" name="email"> <span id="emailError" class="error"></span> </td> 
+     </tr> 
+     <tr> 
+      <td>MOBILE NUMBER:</td> 
+      <td><input type="tel" id="mobile" name="mobile" maxlength="10"> <span id="mobileError" class="error"></span> </td> 
+     </tr> 
+     <tr> 
+      <td>GENDER</td> 
+      <td><input type="radio" name="gender" value="male">Male <input type="radio" name="gender" value="female">Female</td> 
+     </tr> 
+     <tr> 
+      <td>ADDRESS</td> 
+      <td><textarea name="address" rows="3"></textarea></td> 
+     </tr> 
+     <tr> 
+      <td>CITY:</td> 
+      <td><input type="text" ,name="city"></td> 
+     </tr> 
+     <tr> 
+      <td>PIN code:</td> 
+      <td><input type="text" ,name="pin" maxlength="6"></td> 
+     </tr> 
+     <tr> 
+      <td>STATE:</td> 
+      <td><input type="text" ,name="state"></td> 
+     </tr> 
+     <tr> 
+      <td>COUNTRY:</td> 
+      <td><select name="country"> <option value="India">INDIA</option> <option value="Dubai">USA</option> <option value="Other">OTHER </option> </select> </td> 
+     </tr> 
+     <tr> 
+      <td>HOBBIES:</td> 
+      <td><input type="checkbox" name="hobbies" value="drawing">Drawing <input type="checkbox" name="hobbies" value="singing">singing <input type="checkbox" name="hobbies" value="dancing">dancing <input type="checkbox" name="hobbies" value="sketching">sketching <br> <input type="checkbox" name="hobbies" value="others">Others <input type="text"></td> 
+     </tr> 
+     <tr> 
+      <td>QUALIFICATION:</td> 
+      <td> 
+       <table> 
+        <tbody>
+         <tr> 
+          <th>SI NO.</th> 
+          <th>Examination</th> 
+          <th>Board</th> 
+          <th>Percentage</th> 
+          <th>Year of Passing</th> 
+         </tr> 
+         <tr> 
+          <td>1.</td> 
+          <td>Class X</td> 
+          <td><input type="text" name="board10"></td> 
+          <td><input type="text" name="percent10"></td> 
+          <td><input type="text" name="year10"></td> 
+         </tr> 
+         <tr> 
+          <td>2.</td> 
+          <td>Class XII</td> 
+          <td><input type="text" name="board12"></td> 
+          <td><input type="text" name="percent12"></td> 
+          <td><input type="text" name="year12"></td> 
+         </tr> 
+         <tr> 
+          <td>3.</td> 
+          <td>Graduation</td> 
+          <td><input type="text" name="boardgrad"></td> 
+          <td><input type="text" name="percentgrad"></td> 
+          <td><input type="text" name="yeargrad"></td> 
+         </tr> 
+         <tr> 
+          <td>4.</td> 
+          <td>Masters</td> 
+          <td><input type="text" name="boardm"></td> 
+          <td><input type="text" name="percentm"></td> 
+          <td><input type="text" name="yearm"></td> 
+         </tr> 
+        </tbody>
+       </table> </td> 
+     </tr> 
+     <tr> 
+      <td>COURSE APPLIED FOR:</td> 
+      <td> <input type="radio" name="course" value="MCA">MCA <input type="radio" name="course" value="mtech">M.TECH <input type="radio" name="course" value="msc">M.Sc <input type="radio" name="course" value="phd">Ph.D </td> 
+     </tr> 
+     <tr> 
+      <td>TYPE YOUR PASSWORD:</td> 
+      <td><input type="password" ,name="pswd"></td> 
+     </tr> 
+     <tr> 
+      <td>UPLOAD YOUR PHOTO:</td> 
+      <td><input type="file" ,name="photo"></td> 
+     </tr> 
+     <tr>
+      <td>DATE OF TC:</td> 
+      <td><input type="date" ,name="tcdate"></td> 
+     </tr>
+     <tr> 
+      <td colspan="2" align="center"> <button type="submit">Submit</button> <button type="reset">Reset</button> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+  </form> 
+  <script>
+function validateForm() {
+const fname = document.getElementById('fname').value.trim();
+ const lname = document.getElementById('lname').value.trim();
+ const email = document.getElementById('email').value.trim();
+ const mobile = document.getElementById('mobile').value.trim();
+
+ const namePattern = /^[A-Za-z\s]{1,30}$/;
+ const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+ const mobilePattern = /^[0-9]{10}$/;
+
+let isValid = true;
+
+ if (!namePattern.test(fname)) {
+        document.getElementById('firstNameError').textContent = "Please enter a valid First Name (letters only, max 30 characters).";
+        isValid = false;
+      } else {
+        document.getElementById('firstNameError').textContent = "";
+      }
+
+if (!namePattern.test(lname)) {
+        document.getElementById('lastNameError').textContent = "Please enter a valid Last Name (letters only, max 30 characters).";
+        isValid = false;
+      } else {
+        document.getElementById('lastNameError').textContent = "";
+      }
+
+
+ if (!emailPattern.test(email)) {
+        document.getElementById('emailError').textContent = "Please enter a valid Email address.";
+        isValid = false;
+      } else {
+        document.getElementById('emailError').textContent = "";
+      }
+      if (!mobilePattern.test(mobile)) {
+        document.getElementById('mobileError').textContent = "Please enter a valid 10-digit Mobile Number.";
+        isValid = false;
+      } else {
+        document.getElementById('mobileError').textContent = "";
+      }
+
+return isValid;
+}
+</script> 
+ </body>
+</html>
