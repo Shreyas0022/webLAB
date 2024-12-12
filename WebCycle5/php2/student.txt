@@ -1,0 +1,5 @@
+CREATE TABLE `users` (
+  `ID` int(15) NOT NULL,
+  `USERNAME` varchar(30) NOT NULL,
+  `PASSWORD` int(10) NOT NULL
+)
